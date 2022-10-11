@@ -1,0 +1,260 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<!-- Адаптивный сайт-галерея с меню,
+только можно еще настроить размер фото при обычном экране -->
+<head>
+  <meta charset="UTF-8">
+  <title>Создание галереи слайд-шоу</title>
+  <!-- Нормализуем стили -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <!-- Подключаем собственные стили -->
+  <link rel="stylesheet" href="css/site4.css">
+  <!-- Отображаем фавикон -->
+  <link rel="shortcut icon" type="image/x-icon" href="/hw_page_js/img/fav/i.webp">
+  <!-- Подключаем шрифты -->
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial;
+    }
+
+    .header {
+      overflow: hidden;
+      background-color: #f1f1f1;
+      padding: 20px 10px;
+    }
+
+    .header a {
+      float: left;
+      color: black;
+      text-align: center;
+      padding: 12px;
+      text-decoration: none;
+      font-size: 20px;
+      line-height: 25px;
+      border-radius: 6px;
+    }
+
+    .header a.logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .header a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .header a.active {
+      background-color: dodgerblue;
+      color: white;
+    }
+
+    .header-right {
+      float: right;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    .container {
+      position: relative;
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+
+    .cursor {
+      cursor: pointer;
+    }
+
+
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 40%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;/*тест*/
+    }
+
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    .caption-container {
+      text-align: center;
+      background-color: #ddd;
+      padding: 2px 16px;
+      color: white;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Six columns side by side */
+    .column {
+      float: left;
+      width: 16.66%;
+    }
+
+
+    .demo {
+      opacity: 0.6;
+    }
+
+    .active,
+    .demo:hover {
+      opacity: 1;
+    }
+
+    @media screen and (max-width: 800px) {
+      .header a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+
+      .header-right {
+        float: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <a href="#default" class="logo">Logo</a>
+    <div class="header-right">
+      <a class="active" href="#home">Home</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+    </div>
+  </div>
+
+  <h2 style="text-align: center;">Сайт-галлерея</h2>
+  <!-- Контейнер слайдшоу -->
+  <div class="container">
+    <!-- Блок полноразмерных картинок с номерами и текстом -->
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+      <img src="img/ex1.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+      <img src="img/ex2.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+      <img src="img/ex3.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+      <img src="img/ex4.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+      <img src="img/ex5.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">6 / 6</div>
+      <img src="img/ex6.jpg" style="width:100%">
+    </div>
+    <!-- Кнопки вперед и назад -->
+    <a class="prev" onclick="plusSlides(-1)"></a>
+    <a class="next" onclick="plusSlides(1)"></a>
+    <!--Текст на картинке -->
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+      <!-- Thumbnail images -->
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="img/ex1.jpg " style="width:100%;" onclick="currentSlide(1)" alt="Артек_Фото 1">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="img/ex2.jpg " style="width:100%" onclick="currentSlide(2)" alt=" Артек_Фото 2">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="img/ex3.jpg" style="width:100%" onclick="currentSlide(3)" alt=" Артек_Фото 3">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="img/ex4.jpg" style="width:100%" onclick="currentSlide(4)" alt=" Артек_Фото 4">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="img/ex5.jpg" style="width:100%" onclick="currentSlide(5)" alt=" Артек_Фото 5">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="img/ex6.jpg" style="width:100%" onclick="currentSlide(6)" alt=" Артек_Фото 6">
+        </div>
+      </div>
+  </div>
+
+  <script>
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    // кнопки вперед/назад
+    function plusSlides(n) {
+     showSlides(slideIndex += n);
+    }
+    // управление картинками
+    function currentSlide(n) {
+     showSlides(slideIndex = n);
+    }
+    function showSlides(n) {
+     var i;
+     var slides = document.getElementsByClassName("mySlides");
+     var dots = document.getElementsByClassName("demo");
+     var captionText = document.getElementById("caption");
+     if (n > slides.length) {slideIndex = 1}
+     if (n < 1) {slideIndex = slides.length}
+     for (i = 0; i < slides.length; i++) {
+     slides[i].style.display = "none";
+     }
+     for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" active", "");
+     }
+     slides[slideIndex-1].style.display = "block";
+     dots[slideIndex-1].className += " active";
+     captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    
+    </script>
+
+</body>
+
+</html>
