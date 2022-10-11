@@ -75,3 +75,59 @@
     opacity: 1;
    }
 
+/* ++++++++++++++++++++++++++++++++++
+Контейнер слайдшоу - добавила авто слайды
++++++++++++++++++++++++++++++++++ */
+.slideshow-container1 {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+   }
+/* ++++++++++++++++++++++++++++++++++
+Прячем картинки по умолчанию
++++++++++++++++++++++++++++++++++ */
+.mySlides1 {
+    display: none;
+   }
+/* ++++++++++++++++++++++++++++++++++
+текст на картинке
++++++++++++++++++++++++++++++++++ */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+   }   
+/* ++++++++++++++++++++++++++++++++++
+текст по номеру 1/ из n
++++++++++++++++++++++++++++++++++ */
+.numbertext1 {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+   }
+/* ++++++++++++++++++++++++++++++++++
+анимация fade
++++++++++++++++++++++++++++++++++ */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+   }
+      
+/* ++++++++++++++++++++++++++++++++++
+зачем-то сделали и закрыли
+@-webkit-keyframes fade {
+ from {opacity: .4}
+ to {opacity: 1}
+}
+@keyframes fade {
+ from {opacity: .4}
+ to {opacity: 1}
+           

@@ -2,13 +2,14 @@
 <html lang="ru">
 <!-- Адаптивный сайт-галерея с меню,
 только можно еще настроить размер фото при обычном экране -->
+
 <head>
   <meta charset="UTF-8">
   <title>Создание галереи слайд-шоу</title>
   <!-- Нормализуем стили -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
   <!-- Подключаем собственные стили -->
-  <link rel="stylesheet" href="css/site4.css">
+  <link rel="stylesheet" href="/hw_page_js/css/page_js.css">
   <!-- Отображаем фавикон -->
   <link rel="shortcut icon" type="image/x-icon" href="/hw_page_js/img/fav/i.webp">
   <!-- Подключаем шрифты -->
@@ -91,7 +92,8 @@
       font-size: 20px;
       border-radius: 0 3px 3px 0;
       user-select: none;
-      -webkit-user-select: none;/*тест*/
+      -webkit-user-select: none;
+      /*тест*/
     }
 
     .next {
@@ -197,30 +199,61 @@
     <a class="prev" onclick="plusSlides(-1)"></a>
     <a class="next" onclick="plusSlides(1)"></a>
     <!--Текст на картинке -->
-      <div class="caption-container">
-        <p id="caption"></p>
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+    <!-- Thumbnail images -->
+    <div class="row">
+      <div class="column">
+        <img class="demo cursor" src="img/ex1.jpg " style="width:100%;" onclick="currentSlide(1)" alt="Артек_Фото 1">
       </div>
-      <!-- Thumbnail images -->
-      <div class="row">
-        <div class="column">
-          <img class="demo cursor" src="img/ex1.jpg " style="width:100%;" onclick="currentSlide(1)" alt="Артек_Фото 1">
-        </div>
-        <div class="column">
-          <img class="demo cursor" src="img/ex2.jpg " style="width:100%" onclick="currentSlide(2)" alt=" Артек_Фото 2">
-        </div>
-        <div class="column">
-          <img class="demo cursor" src="img/ex3.jpg" style="width:100%" onclick="currentSlide(3)" alt=" Артек_Фото 3">
-        </div>
-        <div class="column">
-          <img class="demo cursor" src="img/ex4.jpg" style="width:100%" onclick="currentSlide(4)" alt=" Артек_Фото 4">
-        </div>
-        <div class="column">
-          <img class="demo cursor" src="img/ex5.jpg" style="width:100%" onclick="currentSlide(5)" alt=" Артек_Фото 5">
-        </div>
-        <div class="column">
-          <img class="demo cursor" src="img/ex6.jpg" style="width:100%" onclick="currentSlide(6)" alt=" Артек_Фото 6">
-        </div>
+      <div class="column">
+        <img class="demo cursor" src="img/ex2.jpg " style="width:100%" onclick="currentSlide(2)" alt=" Артек_Фото 2">
       </div>
+      <div class="column">
+        <img class="demo cursor" src="img/ex3.jpg" style="width:100%" onclick="currentSlide(3)" alt=" Артек_Фото 3">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img/ex4.jpg" style="width:100%" onclick="currentSlide(4)" alt=" Артек_Фото 4">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img/ex5.jpg" style="width:100%" onclick="currentSlide(5)" alt=" Артек_Фото 5">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img/ex6.jpg" style="width:100%" onclick="currentSlide(6)" alt=" Артек_Фото 6">
+      </div>
+    </div>
+  </div>
+
+  <!--хочу добавить еще автоматическую галерею-->
+  <h2 style="text-align: center;">Слайд-шоу</h2>
+  <!--Контейнер слайдшоу -->
+  <div class="slideshow-container1">
+
+    <!--Блок полноразмерных картинок с номерами и текстом -->
+    <div class="mySlides1 fade">
+      <div class="numbertext1">1 / 4</div>
+      <img src="img/ex1.jpg" style="width:100%">
+      <div class="text">Фотосессия Артек: Алена слева с подругой</div>
+    </div>
+    <div class="mySlides1 fade">
+      <div class="numbertext1">2 / 4</div>
+      <img src="img/ex2.jpg" style="width:100%">
+      <div class="text">Фотосессия Артек: Аленка сердечко</div>
+    </div>
+    <div class="mySlides1 fade">
+      <div class="numbertext1">3 / 4</div>
+      <img src="img/ex3.jpg" style="width:100%">
+      <div class="text">Фотосессия Артек: с вожатой</div>
+    </div>
+    <div class="mySlides1 fade">
+      <div class="numbertext1">4 / 4</div>
+      <img src="img/ex4.jpg" style="width:100%">
+      <div class="text">Фотосессия Артек: Аленка справа и подруги по отряду</div>
+    </div>
+
+    <br>
+
   </div>
 
   <script>
@@ -229,31 +262,47 @@
     showSlides(slideIndex);
     // кнопки вперед/назад
     function plusSlides(n) {
-     showSlides(slideIndex += n);
+      showSlides(slideIndex += n);
     }
     // управление картинками
     function currentSlide(n) {
-     showSlides(slideIndex = n);
+      showSlides(slideIndex = n);
     }
     function showSlides(n) {
-     var i;
-     var slides = document.getElementsByClassName("mySlides");
-     var dots = document.getElementsByClassName("demo");
-     var captionText = document.getElementById("caption");
-     if (n > slides.length) {slideIndex = 1}
-     if (n < 1) {slideIndex = slides.length}
-     for (i = 0; i < slides.length; i++) {
-     slides[i].style.display = "none";
-     }
-     for (i = 0; i < dots.length; i++) {
-     dots[i].className = dots[i].className.replace(" active", "");
-     }
-     slides[slideIndex-1].style.display = "block";
-     dots[slideIndex-1].className += " active";
-     captionText.innerHTML = dots[slideIndex-1].alt;
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      captionText.innerHTML = dots[slideIndex - 1].alt;
     }
-    
-    </script>
+
+    // Для автоматического переключения картинок в слайд-шоу необходимо
+    // добавить текст:
+
+    var slideIndex1 = 0;
+    showSlides1();
+    function showSlides1() {
+      var i;
+      var slides1 = document.getElementsByClassName("mySlides1");
+      for (i = 0; i < slides1.length; i++) {
+        slides1[i].style.display = "none";
+      }
+      slideIndex1++;
+      if (slideIndex1 > slides1.length) { slideIndex1 = 1 }
+      slides1[slideIndex1 - 1].style.display = "block";
+      setTimeout(showSlides1, 5000); // менять кадры кадые 5 секунды
+    }
+  </script>
 
 </body>
 
