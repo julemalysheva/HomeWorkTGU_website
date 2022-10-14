@@ -770,6 +770,10 @@ width: 782px;
 	flex: 0 1 36px;
 	/*было flex: 0 1 36px;*/
 }
+.button_callback{
+	position: absolute;
+top: -25px;
+}
 
 .icon2 {
 	width: 100%;
