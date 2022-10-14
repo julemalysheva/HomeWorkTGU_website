@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <!--Отображать страницу в масштабе 100% -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Юридические услуги для бизнеса</title>
+    <!--Для корректного отображения в старых браузерах -->
+    <meta http-equiv="X-UA-Compatoble" content="IE=edge">
+    <!--Нормализуем стили -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <!--Отображаем фавикон -->
+    <link rel="shortcut icon" type="image/x-icon" href="/img/fav/fav.png">
+    <!--Подключаем собственные стили -->
+    <link rel="stylesheet" href="forma.css">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!--Подключаем шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Asap:500,700&display=swap" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <!-- Подключила еще что-то по  bootstrap-->
+    <script defer src="js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+h2{
+    text-align: center;
+}
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+            
+        }
+
+        input[type=submit] {
+            background-color: #FDB64E;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left:50%;
+            float:right;
+            /*text-align: center;*/
+
+        }
+
+        input[type=submit]:hover {
+            background-color: #2E363E;
+            color: #FDB64E;
+        }
+
+        .container {
+            border-radius: 8px;
+            /*background-color: #f2f2f2;*/
+            background-color: #FFE0B1;
+
+            padding: 25px;
+        }
+
+        .col-20 {
+            float: left;
+            width: 20%;
+            margin-top: 6px;
+        }
+
+        .col-80 {
+            float: left;
+            width: 80%;
+            margin-top: 6px;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media screen and (max-width:800px) {
+
+            .col-20,
+            col-80,
+            input[type=submit] {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <!-- HEADER -->
+        <!-- Верхняя часть Хедера - лого,контакт, добавить переход на Ватсап или кнопку колл-бэка-->
+        <header style="display: flex; flex-direction: column" class="grid-item header">
+            <!--пробую шапку сделать Флекс-->
+            <div class="flex layout">
+                <div class="item">
+                    <div class="block18 layout">
+                        <div class="item">
+                            <img src="/img/pic/logo_law.png" alt="" class="image2 layout" />
+                        </div>
+                        <div class="item1">
+                            <h5 class="highlights3 layout">
+                                Юридическая поддержка 24/7 в Москве<br />и Санкт-Петербурге. <br />Для тех, кто
+                                заботится о своем
+                                бизнесе.  <br />
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item1">
+                    <div class="block16 layout">
+                        <div class="item">
+                            <img src="/img/pic/tel.png" alt="" class="icon2 layout" />
+                        </div>
+                        <div class="item1">
+                            <div class="block17 layout">
+                                <h4 class="highlights2 layout">8 (800) 000-00-00</h4>
+                                <div class="small_text_body2 layout">Ежедневно с 9:00 до 20:00</div>
+
+                            </div>
+
+                        </div>
+                        <!--Пробую добавить кнопку обратного звонка-->
+                        <form action="bootstrap.html">
+                            <button style="width: auto;border-radius: 5px;background-color: #fdb64e;color: #434b53;"
+                                type="submit" class="button button_callback">ПЕРЕЗВОНИТЕ МНЕ</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+
+        <!-- Нижняя часть Хедера - Меню 
+    <menu>
+         Пробую добавить меню Бутстрап, см. в примере по Бутстрапу 
+		<div class="container"> был такой - проверить по свойствам-->
+        <div class="grid-item menu">
+            <!--<div class="d-block d-sm-none col-5 offset-3 menu"> -->
+            <div class="d-none d-sm-none d-md-none d-lg-block col-lg-9 offset-lg-3 menu">
+                <ul class="nav_menu">
+                    <li class="menu__list"><a href="/index.html" class="menu__link"> ГЛАВНАЯ</a></li>
+                    <li class="menu__list"><a href="#" class="menu__link"> КАК НАЧАТЬ</a></li>
+                    <li class="menu__list"><a href="#" class="menu__link"> ТАРИФЫ</a></li>
+                    <li class="menu__list"><a href="#" class="menu__link"> ОТЗЫВЫ</a></li>
+                    <li class="menu__list"><a href="#contacts" class="menu__link"> КОНТАКТЫ</a></li>
+                </ul>
+            </div>
+
+
+            <div
+                class="d-block d-sm-block d-md-block d-lg-none col-4 col-sm-4 offset-2 offset-sm-3 col-md-2 offset-md-4 mr-auto">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        МЕНЮ
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="/index.html">Главная</a>
+                        <a class="dropdown-item" href="#">Как мы работаем</a>
+                        <a class="dropdown-item" href="#">Тарифы</a>
+                        <a class="dropdown-item" href="#">Отзывы</a>
+                        <a class="dropdown-item" href="#">Контакты</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- форма -->
+
+        <section class="grid-item screen">
+
+            <body>
+                <h2 style="color: #ffffff;" >Получите консультацию прямо сейчас
+                </h2>
+                <div class="container">
+                    <form>
+                        <div class="row">
+                            <div class="col-20">
+                                <label for="fname">Имя</label>
+                            </div>
+                            <div class="col-80">
+                                <input type="text" id="fname" name="firstname" placeholder="Введите свое имя..">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-20">
+                                <label for="lastname">Номер телефона</label>
+                            </div>
+                            <div class="col-80">
+                                <input type="text" id="lname" name="lastname"
+                                    placeholder="Укажите номер телефона">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-20">
+                                <label for="city">Город</label>
+                            </div>
+                            <div class="col-80">
+                                <select id="city" name="city">
+                                    <option value="Moscow">Москва</option>
+                                    <option value="Sochi">Санкт-Петербург</option>
+                                    <option value="NY">Оренбург</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-20">
+                                <label for="subject">Ваш вопрос</label>
+                            </div>
+                            <div class="col-80">
+                                <textarea id="subject" name="subject" placeholder="Опишите Ваш вопрос"
+                                    style="height: 200px;"></textarea>
+                            </div>
+                        </div>
+                </div>
+                <div class="row">
+                    <input type="submit" value="ОТПРАВИТЬ">
+                </div>
+                </form>
+    </div>
+
+    </div>
+    </section>
+
+</body>
+
+</html>
