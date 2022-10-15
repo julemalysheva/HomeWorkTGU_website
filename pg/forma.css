@@ -9,7 +9,6 @@
 		
 	margin: 0 auto;
 	max-width: 1280px;
-	/*оставила 1280, хотя макет 1180*/
 	position: relative;
 	grid-column-gap: 0;
 	grid-row-gap: 0;

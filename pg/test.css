@@ -1,242 +1,38 @@
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat (2, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-template-areas:
-        "header header"
-        "menu menu"
-        "step step"
-        "topic topic"
-        "footer footer";
-
-    margin: 0 auto;
-    max-width: 1280px;
-    position: relative;
-    grid-column-gap: 0;
-    grid-row-gap: 0;
-    height: 100vh;
-}
-
-.grid-item {
-    width: 100% !important;
-    background-size: cover !important;
-}
-
-.header {
-    display: grid;
-    grid-row: 1/2;
-    grid-column: 1/3;
-}
-
-.menu {
-    display: grid;
-    grid-row: 2/3;
-    grid-column: 1/3;
-}
-
-
-.step {
-    /* height: 785px; */
-    display: grid;
-    grid-row: 3/4;
-    grid-column: 1/3;
-    /*height: auto;
-    background-size: cover;
-    padding-bottom: 0.6em;*/
-}
-
-.topic {
-    display: grid;
-    grid-row: 4/5;
-    grid-column: 1/3;
-}
-
-.footer {
-    display: grid;
-    grid-row: 5/6;
-    grid-column: 1/3;
-}
-
-/*Экран Шаги*/
-
-.step {
-    /*display: grid;
-    grid-row: 5 / 6;
-    grid-column: 1 / 3;*/
-    grid-template-columns: 50px 75px 16px 483px 32px 75px 16px 483px 50px;/*где 45 - было 75 - исправить на 45*/
-    grid-template-rows: 50px 22px 35px 121px 24px 121px 24px 121px 51px;
-    background-color: #f5f5f5;
-}
-
-.step h2 {
-    grid-row: 1 / 2;
-    grid-column: 1 / 9;
-    padding-top: 0.6em;
-    text-align: center;
-    /*margin-left: -1.3em;*/
-}
-
-.img_step1,
-.img_step2,
-.img_step3,
-.img_step4,
-.img_step5,
-.img_step6 {
-    width: 45px; /*75*/
-    height: 45px; /*75*/
-    background-color: #445161;
-    border-radius: 50%;
-}
-
-.img_step1 {
-    grid-row: 4 / 5;
-    grid-column: 2 / 3;
-}
-
-.img_step2 {
-    grid-row: 6 / 7;
-    grid-column: 2 / 3;
-}
-
-.img_step3 {
-    grid-row: 8 / 9;
-    grid-column: 2 / 3;
-}
-
-.img_step4 {
-    grid-row: 4 / 5;
-    grid-column: 6 / 7;
-}
-
-.img_step5 {
-    grid-row: 6 / 7;
-    grid-column: 6 / 7;
-}
-.img_step6 {
-    grid-row: 8 / 9;
-    grid-column: 6 / 7;
-}
-
-
-
-.step1,
-.step2,
-.step3,
-.step4,
-.step5,
-.step6 {
-    font-style: italic;
-    font-size: 1.3rem;/*0.92rem*/
-    font-weight: 500;
-    color: #333333;
-    padding-left: 1.8em;
-    margin-top: -0.2em;
-    /*background-image: url(img/bg_review.png);*/
-    /*line-height: 1.12rem;*/
-}
-
-.step1 {
-    grid-row: 4 / 5;
-    grid-column: 4 / 5;
-}
-
-.step2 {
-    grid-row: 6 / 7;
-    grid-column: 4 / 5;
-}
-.step3{
-    grid-row: 8 / 9;
-    grid-column: 4 / 5;
-}
-.step4 {
-    grid-row: 4 / 5;
-    grid-column: 8 / 9;
-}
-
-.step5 {
-    grid-row: 6 / 7;
-    grid-column: 8 / 9;
-}
-.step6 {
-    grid-row: 8 / 9;
-    grid-column: 8 / 9;
-}
-
-
-.sign {
-    font-style: italic;
-    font-size: 0.97rem;/*0.87*/
-    color: #989898;
-    line-height: 1.12em;
-    font-weight: 400;
-
-}
-
-/*Блок с аккордеоном*/
-.topic{
-    display: grid;
-    background-color: #FFE0B1;
-    grid-template-columns: repeat(9, 1fr); /*30px 600px 600px 30px;*/
-    grid-template-rows: auto;/*repeat(9, 1fr);*/
-
-
-}
-.topic h2 {
-    grid-row: 1 / 2;
-    grid-column: 2 / 9;
-    padding-top: 0.6em;
-    text-align: center;
-    /*margin-left: -1.3em;*/
-    margin-bottom: 35px;
-}
-.topic h3 {
-    grid-row: 9 / 10;
-    grid-column: 2 / 9;
-    padding-top: 0.6em;
-    text-align: center;
-    /*margin-left: -1.3em;*/
-    margin-bottom: 35px;
-}
-/*Вопрос-Ответ Акордеон*/
-/* 
+* 
 * Формируем базовый контейнер аккордеона 
 */
 .accordion {
-    grid-row: 3 / 8;
-    grid-column: 2 / 9;
-   width: 100%;
+    width: 100%;
 /*
 ширина произвольная выбирается
 *в зависимости от места размещения 
 */
-    /*max-width: 900px;*/
+    max-width: 600px;
     min-height: 0;
-   /* display: block;*/
+    display: block;
 /* относительное позиционирование */
-   /* position: relative;*/
+    position: relative;
     margin: 0 auto;
     padding: 0;
-    background-color: #FFE0B1;/*#fefffa;*/
+    background-color: #fefffa;
     overflow: hidden
 }
 /* заголовки панелей аккордеона */
 .accordion h2 {
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 16px;
+    font-weight: 300;
     letter-spacing: 1px;
     display: block;
     margin: 0;
     padding: 10px 25px;
     cursor: pointer;
-    color: #2E363E;
-    background: #FDB64E;
-    border-top: 1px solid #445161;
-    border-bottom: 1px solid #2E363E;
+    color: #f4f4f4;
+    background: #2d8bbb;
+    border-top: 1px solid #3face4;
+    border-bottom: 1px solid #2479a5;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    text-align: left;
-
 }
 /* заголовки панелей аккордеона при наведении
 * в данном варианте не срабатывает
@@ -259,10 +55,10 @@
 /* оформляем параграфы */
 .msg p {
   color: rgba(48, 69, 92, 0.8);
-  font-size: 18px;
+  font-size: 13px;
   line-height: 20px;
   letter-spacing: 1px;
-  padding: 10px 20px
+  padding: 0 20px
 }
  
 /* Позаботимся о небольших экранах */
