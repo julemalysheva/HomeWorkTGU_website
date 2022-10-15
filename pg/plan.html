@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <!--Отображать страницу в масштабе 100% -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Юридические услуги для бизнеса</title>
+  <!--Для корректного отображения в старых браузерах -->
+  <meta http-equiv="X-UA-Compatoble" content="IE=edge">
+  <!--Нормализуем стили -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <!--Отображаем фавикон -->
+  <link rel="shortcut icon" type="image/x-icon" href="/img/fav/fav.png">
+  <!--Подключаем собственные стили -->
+  <link rel="stylesheet" href="plan.css">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!--Подключаем шрифты -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Asap:500,700&display=swap" rel="stylesheet">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <!-- Подключила еще что-то по  bootstrap-->
+  <script defer src="js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+</head>
+
+<body>
+  <div class="grid-container">
+    <!-- HEADER -->
+    <!-- Верхняя часть Хедера - лого,контакт, добавить переход на Ватсап или кнопку колл-бэка-->
+    <header style="display: flex; flex-direction: column" class="grid-item header">
+      <!--пробую шапку сделать Флекс-->
+      <div class="flex layout">
+        <div class="item">
+          <div class="block18 layout">
+            <div class="item">
+              <img src="/img/pic/logo_law.png" alt="" class="image2 layout" />
+            </div>
+            <div class="item1">
+              <h5 class="highlights3 layout">
+                Юридическая поддержка 24/7 в Москве<br />и Санкт-Петербурге. <br />Для тех, кто
+                заботится о своем
+                бизнесе.  <br />
+              </h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="item1">
+          <div class="block16 layout">
+            <div class="item">
+              <img src="/img/pic/tel.png" alt="" class="icon2 layout" />
+            </div>
+            <div class="item1">
+              <div class="block17 layout">
+                <h4 class="highlights2 layout">8 (800) 000-00-00</h4>
+                <div class="small_text_body2 layout">Ежедневно с 9:00 до 20:00</div>
+
+              </div>
+
+            </div>
+            <!--Пробую добавить кнопку обратного звонка-->
+            <form action="/pg/forma.html">
+              <button style="width: auto;border-radius: 5px;background-color: #fdb64e;color: #434b53;" type="submit"
+                class="button button_callback">ПЕРЕЗВОНИТЕ МНЕ</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Нижняя часть Хедера - Меню 
+<menu>
+     Пробую добавить меню Бутстрап, см. в примере по Бутстрапу 
+<div class="container"> был такой - проверить по свойствам-->
+    <div class="grid-item menu">
+      <!--<div class="d-block d-sm-none col-5 offset-3 menu"> -->
+      <div class="d-none d-sm-none d-md-none d-lg-block col-lg-9 offset-lg-3 menu">
+        <ul class="nav_menu">
+          <li class="menu__list"><a href="/index.html" class="menu__link"> ГЛАВНАЯ</a></li>
+          <li class="menu__list"><a href="/pg/step.html" class="menu__link"> КАК РАБОТАЕМ</a></li>
+          <li class="menu__list"><a href="/pg/plan.html" class="menu__link"> ТАРИФЫ</a></li>
+          <li class="menu__list"><a href="#" class="menu__link"> ОТЗЫВЫ</a></li>
+          <li class="menu__list"><a href="#contacts" class="menu__link"> КОНТАКТЫ</a></li>
+        </ul>
+      </div>
+
+
+      <div
+        class="d-block d-sm-block d-md-block d-lg-none col-4 col-sm-4 offset-2 offset-sm-3 col-md-2 offset-md-4 mr-auto">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            МЕНЮ
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="/index.html">Главная</a>
+            <a class="dropdown-item" href="/pg/step.html">Как мы работаем</a>
+            <a class="dropdown-item" href="/pg/plan.html">Тарифы</a>
+            <a class="dropdown-item" href="#">Отзывы</a>
+            <a class="dropdown-item" href="#contacts">Контакты</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--</div>-->
+    <!--</menu>-->
+
+    <!-- ИКОНКИ -->
+
+    <div class="grid-item eigths_screen">
+        <div class="row Client">
+          <div class="col-sm-6 col-md-6 col-lg-3 pb-3 d-flex justify-content-center Hands__img"><img
+              src="/pg/img/Group22.png" alt="Client"></div>
+          <div class="col-sm-6 col-md-6 col-lg-3 pb-3 d-flex justify-content-center Happy__img"><img
+              src="/pg/img/Group23.png" alt="Client"></div>
+          <div class="col-sm-6 col-md-6 col-lg-3 pb-3 d-flex justify-content-center Project__img"><img
+              src="/pg/img/Group24.png" alt="Client"></div>
+          <div class="col-sm-6 col-md-6 col-lg-3 pb-3 d-flex justify-content-center Coffee__img"><img
+              src="/pg/img/Group25.png" alt="Client"></div>
+        </div>
+    </div>
+    <!-- ОПИСАНИЕ ТАРИФОВ-->
+
+    <div class="grid-item pricingTable">
+      <h2 class="pricingTable-title">Найдите план, который подходит <br>именно вам</h2>
+      <h3 class="pricingTable-subtitle">В каждом тарифе предусмотрен тестовый период <br>для оценки нашей работы</h3>
+
+      <ul class="pricingTable-firstTable">
+        <li class="pricingTable-firstTable_table">
+          <h1 class="pricingTable-firstTable_table__header">Базовый</h1>
+          <p class="pricingTable-firstTable_table__pricing"><span>&#8381;</span><span>30 000</span><span>Месяц</span></p>
+          <ul class="pricingTable-firstTable_table__options">
+            <li>Консультации юриста до 3 часов в месяц</li>
+            <li>Подготовка до 3х договоров в месяц</li>
+            <li>Проверка наджености контрагентов - до 6</li>
+            <li>И так далее и тому подобное</li>
+          </ul>
+          <button class="pricingTable-firstTable_table__getstart">Узнать больше</button>
+        </li>
+        <li class="pricingTable-firstTable_table">
+          <h1 class="pricingTable-firstTable_table__header">Оптимальный</h1>
+          <p class="pricingTable-firstTable_table__pricing"><span>&#8381;</span><span>50 000</span><span>Месяц</span></p>
+          <ul class="pricingTable-firstTable_table__options">
+            <li>Консультации юриста до 6 часов в месяц</li>
+            <li>Подготовка до 6х договоров в месяц</li>
+            <li>Проверка наджености контрагентов - до 8</li>
+            <li>Скидка на услуги 15%</li>
+            <li>24/7 поддержка</li>
+            <li>И так далее и тому подобное</li>
+          </ul>
+          <button class="pricingTable-firstTable_table__getstart">Узнать больше</button>
+        </li>
+        <li class="pricingTable-firstTable_table">
+          <h1 class="pricingTable-firstTable_table__header">Премиум</h1>
+          <p class="pricingTable-firstTable_table__pricing"><span>&#8381;</span><span>100 000</span><span>Месяц</span></p>
+          <ul class="pricingTable-firstTable_table__options">
+            <li>Консультации юриста до 12 часов в месяц</li>
+            <li>Подготовка до 12х договоров в месяц</li>
+            <li>Проверка наджености контрагентов - до 12</li>
+            <li>И так далее и тому подобное</li>
+          </ul>
+          <button class="pricingTable-firstTable_table__getstart">Узнать больше</button>
+        </li>
+      </ul>
+    </div>
+
+    <footer class="grid-item footer">
+      <h2><a name="contacts"></a> Контакты </h2>
+
+      <div class="footer_form footer_form_contact">
+
+        <form class="myForm">
+          <input class="input" type="text" name="customer_name" id="customer_name" placeholder="Ваше имя" required>
+          <input class="input" type="email" name="email_address" id="email_address" placeholder="Ваш email" required>
+          <textarea class="input" name="message" id="message" placeholder="Ваш вопрос" maxlength="500"></textarea>
+          <button>Отправить</button>
+        </form>
+      </div>
+
+      <div class="footer_contacts_social">
+        <img src="/img/pic/skype_icon.png" alt="lawyerForBusiness" class="skype__img">
+        <span class="login_skype">our_login_skype </span>
+        <img src="/img/pic/icq_icon.png" alt="lawyerForBusiness" class="icq__img">
+        <span class="icq_login"> 101010101 </span>
+        <img src="/img/pic/email_icon.png" alt="lawyerForBusiness" class="email__img">
+        <span class="email_address"> email@email.ru </span>
+        <img src="/img/pic/phone_icon.png" alt="lawyerForBusiness" class="phone__img">
+        <span class="phone_number"> 80 00 4444 55 55 </span>
+
+
+        <div class="social_icons">
+          <a href="http://twitter.com"><img src="/img/pic/Twitter.png" alt="lawyerForBusiness" class="twitter__icon">
+          </a>
+          <a href="http://facebook.com"><img src="/img/pic/Facebook.png" alt="lawyerForBusiness" class="facebook__icon">
+          </a>
+          <a href="http://linkedin.com"><img src="/img/pic/Linkedin.png" alt="lawyerForBusiness" class="linkedin__icon">
+          </a>
+          <a href="http://google.com"><img src="/img/pic/Google.png" alt="lawyerForBusiness" class="google__icon">
+          </a>
+          <a href="http://youtube.com"><img src="/img/pic/Youtube.png" alt="lawyerForBusiness" class="youtube__icon">
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+</body>
+
+</html>

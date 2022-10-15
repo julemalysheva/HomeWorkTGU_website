@@ -209,11 +209,11 @@
 ширина произвольная выбирается
 *в зависимости от места размещения 
 */
-    /*max-width: 900px;*/
+    /*max-width: 900px;в моем случае по колонкам Грид*/
     min-height: 0;
-   /* display: block;*/
+   display: block;
 /* относительное позиционирование */
-   /* position: relative;*/
+   position: relative;
     margin: 0 auto;
     padding: 0;
     background-color: #FFE0B1;/*#fefffa;*/
@@ -420,3 +420,189 @@ div.msg, ul li i:before, ul li i:after {
     width: 100%;
     height: 100%;
 }
+
+/*Адаптив*/
+@media screen and (max-width: 1200px) {
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(960px, 1200px));
+      display: grid;
+      grid-template-rows: repeat(5, 1fr);
+      margin: 0 auto;
+      position: relative;
+      grid-column-gap: 0;
+      grid-row-gap: 0;
+      height: 100vh;
+    }
+
+    /*step*/
+    .step {
+        display: grid;
+        grid-template-columns: 5% 45% 45% 5%;
+        grid-template-rows: auto;
+        grid-row: 3 / 4;
+        grid-column: 1 / 4;
+      }
+    
+      .step h2 {
+        grid-row: 2 / 3;
+        grid-column: 2 / 4;
+        margin-left: 0;
+        text-align: center;
+      }
+    
+      .img_step1,
+      .img_step2,
+      .img_step3,
+      .img_step5, 
+      .img_step6 {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin: .7em 0 0 -.5em;
+      }
+    
+      .img_step1,
+      .step1 {
+        grid-row: 3 / 4;
+        grid-column: 2 / 3;
+      }
+    
+      .img_step2,
+      .step2 {
+        grid-row: 4 / 5;
+        grid-column: 2 / 3;
+      }
+    
+      .img_step3,
+      .step3 {
+        grid-row: 5 / 6;
+        grid-column: 2 / 3;
+      }
+      .img_step4,
+      .step4 {
+        grid-row: 3 / 4;
+        grid-column: 3 / 4;
+      }
+
+      .img_step5,
+      .step5 {
+        grid-row: 4 / 5;
+        grid-column: 3 / 4;
+      }
+
+          .img_step6,
+      .step6 {
+        grid-row: 5 / 6;
+        grid-column: 3 / 4;
+      }
+
+      .step1,
+      .step2,
+      .step3,
+      .step4,
+      .step5,
+      .step6 {
+        font-size: 0.9rem;
+        font-weight: 300;
+        /* margin-right: 1.5em; */
+        margin-left: 2em;
+        margin-bottom: 1.5em;
+        margin-top: -0.2em;
+        font-style: italic;
+        background-size: cover;
+      }
+    
+    
+
+}
+@media screen and (max-width: 768px) {
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(540px, 768px));
+      grid-template-rows: repeat(5, 1fr);
+      margin: 0 auto;
+      position: relative;
+      grid-column-gap: 0;
+      grid-row-gap: 0;
+      height: 100vh;
+    }
+  
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    h2 {
+      font-size: 1.1rem;
+    }
+  
+    h3 {
+      font-size: 1rem;
+    }
+    .step {
+        display: grid;
+        grid-template-columns: 10% 80% 10%;
+        grid-template-rows: auto;
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
+      }
+      .step h2{
+        display: none;
+      }
+    
+      .img_step1,
+      .img_step2,
+      .img_step3,
+      .img_step4,
+      .img_step5,
+      .img_step6{
+        margin: 2em 0 0 -2em;
+      }
+    
+      .img_step1,
+      .step1 {
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+      }
+    
+      .img_step2,
+      .step2 {
+        grid-row: 3 / 4;
+        grid-column: 2 / 3;
+      }
+      .img_step3,
+      .step3 {
+        grid-row: 4 / 5;
+        grid-column: 2 / 3;
+      }
+    
+      .img_step4,
+      .step4 {
+        grid-row: 5 / 6;
+        grid-column: 2 / 3;
+      }
+    
+      .img_step5,
+      .step5 {
+        grid-row: 6/ 7;
+        grid-column: 2 / 3;
+      }
+      .img_step6,
+      .step6 {
+        grid-row: 7 / 8;
+        grid-column: 2 / 3;
+      }
+
+    
+      .step1,
+      .step2,
+      .step3,
+      .step4,
+      .step5,
+      .step6 {
+    
+        font-size: 0.8rem;
+        font-weight: 300;
+      }
+    
+    }    
