@@ -100,12 +100,6 @@ p {
 
 /*  1 экран Бутстрап вместо флекс - объединить нужные стили */
 
-/*.therd_screen {
-	/* height: 680px; это было закомментировано
-	height: auto;
-	width: 100%;
-	padding-bottom: 7.81em;
-  }*/
 
   .More_first {
 	position: absolute; /*?*/
@@ -163,8 +157,7 @@ width: 782px;
 	margin-top: 7em;
   }
 
-  /*копирую свойства адаптива Бут
-  переименовать везде некоторые классы*/
+  /* свойства адаптива Бут*/
   @media screen and (max-width: 1200px) {
 	.box {
 	  width: 960px;
@@ -267,7 +260,6 @@ width: 782px;
 /*2 экран - преимущества*/
 .about {
 	display: grid;
-	/*display: -ms-grid; добавила по примеру хедера в шаблоне,вдруг поможет нормально все расположить?*/
 	grid-template-columns: 20px 1fr 1fr 1fr 1fr 20px; /*repeat (5, 1fr);*/
 	grid-template-rows: auto;
 	grid-row: 4 / 5;
@@ -279,7 +271,7 @@ width: 782px;
 	grid-column: 2 / 6; /*2/3 сейчас на всю*/
 	grid-row: 1 / 4; /**1/3/
 	grid-template-columns: 50px 649px 101px 430px 50px;
-	/*grid-template-rows: 150px 28px 30px 63px 60px 60px 60px 60px;пробую еще по другому, так было*/*/
+	/*grid-template-rows: 150px 28px 30px 63px 60px 60px 60px 60px;пробую еще по другому, так было*/
 	/*grid-template-rows: 50px 28px 30px 63px 20px 60px 45px 48px;*/
 }
 
@@ -995,7 +987,9 @@ top: -25px;
 	outline: none;
 }
 
-/*Описание Флекс Section1*/
+/*Описание Флекс Section1
+не все уже нужно, но оставлю, т.к. есть нужные элементы
+позже почистить*/
 .flex1 {
 	display: flex;
 }
