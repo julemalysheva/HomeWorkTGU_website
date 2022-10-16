@@ -37,13 +37,13 @@ body {
 }
 
 h1 {
-	font-family: 'Lato', sans-serif;
+	font-family: "Montserrat", Helvetica,'Lato', Arial, sans-serif;/*"Montserrat", Helvetica, Arial, serif;*/
 	font-weight: 400;
 	font-size: 3.75rem;
 }
 
 h2 {
-	font-family: 'Lato', sans-serif;
+	font-family: "Montserrat", Helvetica,'Lato', Arial, sans-serif; /*'Lato', sans-serif;*/
 	font-size: 1.87rem;
 	font-weight: 400;
 	line-height: 2.25rem;
@@ -52,7 +52,7 @@ h2 {
 }
 
 h3 {
-	font-family: 'Lato', sans-serif;
+	font-family: "Montserrat", Helvetica,'Lato', Arial, sans-serif; /*'Lato', sans-serif;*/
 	font-size: 1.5rem;
 	font-weight: 400;
 	line-height: 1.87rem;
@@ -60,7 +60,7 @@ h3 {
 }
 
 p {
-	font-family: 'Lato', sans-serif;
+	font-family: "Montserrat", Helvetica,'Lato', Arial, sans-serif; /*'Lato', sans-serif; */
 	font-weight: 400;
 	text-align: left;
 	line-height: 1.5rem;
@@ -92,59 +92,232 @@ p {
 	background-color: #ffffff;
 	/*описать картинку фона*/
 	background-image: url("../img/bg/section1.png");
+	/*перенесла сюда стили из ниженего класса , имя поменяла*/
+	height: auto;
+	width: 100%;
+	padding-bottom: 7.81em;
 }
 
+/*  1 экран Бутстрап вместо флекс - объединить нужные стили */
 
-/*пока не очень работает, разобраться почему
-вместить список*/
+
+  .More_first {
+	position: absolute; /*?*/
+	margin-top: 8em;
+	/*добавляю 14.10*/
+	height: 544px;
+	padding: 0px;
+	gap: 48px;
+	width: 773px;
+	left: 13px;
+	top: 53px;
+  }
+  
+  .More_first p {
+	color: #ffffff;
+	font: 400 21px/1.42 "Montserrat", Helvetica, Arial, serif;
+	letter-spacing: -0.200000003px;
+	width: 100%; /*69.57%;*/
+	border-radius: 5px;
+	margin: 24px 30.43% 0px 0%;
+	background-color: rgba(242, 246, 250, 0.3);
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 1.25);/*1.25 вместо 0,25*/
+
+	/*font-family: "Montserrat", Helvetica,'Lato', Arial, sans-serif;/*'Lato', sans-serif;*/
+	/*font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.62rem;*/
+  }
+  
+  .First,
+  .More {
+	text-align: left;
+  }
+  /*добавляю 14.10 - регулирую заливку*/
+  .First{
+  background-color: rgba(242, 246, 250, 0.698);
+  border-radius: 5px 5px 5px 5px;
+  width: 100%; /*75.06%; вроде и без было норм)*/
+  margin: 0px 24.94% 0px 0%;
+}
+.More_first h2{
+	font: 700 48px/1.25 "Montserrat", Helvetica, Arial, serif;
+	color: white;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 1.25);/*1.25 вместо 0,25*/
+	letter-spacing: -1px;
+/*поправить ширину блока текста*/
+/*overflow: hidden;
+top: 0px;*/
+/*удалила высоту, все снизу вверх встало нормально*/
+width: 782px;
+/*right: -9px;*/
+
+}
+  .Back__img img {
+	margin-top: 7em;
+  }
+
+  /* свойства адаптива Бут*/
+  @media screen and (max-width: 1200px) {
+	.box {
+	  width: 960px;
+	}
+}
+@media screen and (max-width: 992px) {
+	.box {
+	  width: 720px;
+	}
+	.section1 {
+		margin-top: -5em;
+	  }
+	  .More_first h2,
+	  .More_first h3 {
+		text-align: center;
+
+	  }
+	  .First{
+		width:100%;
+	  }
+	.More_first h2{
+	font: 500 36px/1.25 "Montserrat", Helvetica, Arial, serif;
+	width:100%;
+	}
+	  .Back__img {
+		margin-left: 0.2em;
+	  }
+}
+@media screen and (max-width: 768px) {
+	.box {
+	  width: 540px;
+	}
+	.First{
+		width:100%;
+	}
+	.More_first h2{
+		font: 500 36px/1.1 "Montserrat", Helvetica, Arial, serif;
+		width:540px;
+		}
+	
+	.button {
+		font-size: 0.5rem;
+		font-weight: 300;
+		height: 3em;
+		width: 15em;
+		padding-top: 0.7em;
+	  }
+	  .Back__img img {
+		padding: 3em 0 4em 0;
+	  }
+	}
+	@media screen and (max-width: 576px) {
+		.box {
+		  width: 320px;
+		}
+		.button {
+			font-size: 0.5rem;
+			font-weight: 300;
+			padding-top: 0.8em;
+			height: 3em;
+			width: 15em;
+		  }
+		
+		  .section1 {
+			margin-top: -6em;
+			margin-bottom: 0;
+		  }
+		  .More_first h2{
+			font: 600 28px/1.1 "Montserrat", Helvetica, Arial, serif;
+			width:100%;/*300px;*/
+			text-align: left;
+			}
+	
+		  .More p {
+			font-size: 18px;
+			text-align: center;
+			width: 100%;
+			padding: 0 0.3em 0 0.3em;
+		  }
+		  .section1 {
+			padding-bottom: 1em;
+		  }
+		  .Back__img img {
+			margin: 1.5em 0 0 -1em;
+		  }
+		  .More_first img {
+			margin-left: 5em;
+		  }
+		  .First{
+			width:100%;
+		}
+		.More_first h3{
+			width:100%;
+			font-size: 22px
+			}
+	
+		}
+
+  @import url("bootstrap_media");
+/*2 экран - преимущества*/
 .about {
 	display: grid;
-	/*display: -ms-grid; добавила по примеру хедера в шаблоне,вдруг поможет нормально все расположить?*/
-	grid-template-columns: repeat (5, 1fr);
+	grid-template-columns: 20px 1fr 1fr 1fr 1fr 20px; /*repeat (5, 1fr);*/
 	grid-template-rows: auto;
 	grid-row: 4 / 5;
 	grid-column: 1 / 3;
-	background-color: #ffffff;
+	background-color: #FFE0B1;
 }
 
 .description_about {
-	grid-column: 2 / 3;
-	grid-row: 1 / 3;
+	grid-column: 2 / 6; /*2/3 сейчас на всю*/
+	grid-row: 1 / 4; /**1/3/
 	grid-template-columns: 50px 649px 101px 430px 50px;
-	grid-template-rows: 150px 28px 30px 63px 60px 60px 60px 60px;
-	/*grid-template-rows: 50px 28px 30px 63px 20px 60px 45px 48px;пробую еще по другому, так было*/
+	/*grid-template-rows: 150px 28px 30px 63px 60px 60px 60px 60px;пробую еще по другому, так было*/
+	/*grid-template-rows: 50px 28px 30px 63px 20px 60px 45px 48px;*/
 }
 
 .description_about h2 {
-	grid-column: 2 / 3;
-	grid-row: 1 / 2;
-	margin-top: 1.47em;
+	text-align: center;
+	grid-column: 2 / 6; /*2/3*/
+	grid-row: 1 / 2; /*1/2*/
+	margin-top: 1.47em; /*1.47em*/
+	margin-bottom: 30px;/**/
 }
 
 .about__text1 {
-	grid-column: 2 / 3;
-	grid-row: 3 / 4;
+	grid-column: 2 / 4;
+	grid-row: 2 / 3;
+	background-color: rgba(242, 246, 250, 0.3);
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	/*background-color: rgba(242, 246, 250, 0.698);*/
+  border-radius: 5px 5px 5px 5px;
+  width: 85%; 
+  margin: 0px 24.94% 0px 0%;
+  height: max-content;
 }
 
 .about__text2 {
-	grid-column: 2 / 3;
-	grid-row: 5 / 6;
+	grid-column: 2 / 4;
+	grid-row: 3 / 7;
+	font-size: 20px;
+	font: "Montserrat", Helvetica, Arial, serif;
 }
 
 .image_about {
-	grid-column: 4 / 5;
-	grid-row: 2 / 3;
-	height: 245px;
+	/*max-width: 600px;*/
+	grid-column: 4 / 6;/*4/5*/
+	grid-row: 2 / 4;
+	height: auto; /*245*/
+	width: 600px;
 	/*background-color: #445161;*/
-}
+  }
 
 /*Описываем секцию Преимущества, 5ая строка в grid*/
 .dignity {
 	display: grid;
 	grid-row: 5 / 6;
 	grid-column: 1 / 3;
-	grid-template-columns: 50px 32px 549px 32px 526px 73px;
-	grid-template-rows: 120px 28px 29px 63px 35px 63px 36px 63px 51px;
+	grid-template-columns: 50px 45px 541px 45px 526px 65px;
+	grid-template-rows: 120px 28px 40px 63px 40px 63px 40px 63px 45px;
 	background-color: #f5f5f5;
 }
 
@@ -158,14 +331,18 @@ p {
 }
 
 .dignity img {
-	width: 100%;
+	/*width: 100%;*/
+	width: 36px;
+	height: 36px;
 }
 
 .dignity p {
-	font-size: 1rem;
+	/*font-size: 1rem;*/
 	line-height: 1.5rem;
 	padding-top: .4em;
 	padding-left: 9px;
+	font-size: 18px;
+	font: "Montserrat", Helvetica, Arial, serif;
 }
 
 /*подогнать картинку под размер*/
@@ -179,6 +356,8 @@ p {
 .pluses__img1 {
 	grid-row: 4 / 5;
 	grid-column: 2 / 3;
+	/*width: 40px;
+	height: 40px;*/
 }
 
 .pluses__img2 {
@@ -274,7 +453,7 @@ p {
 }
 
 .myForm .input {
-	font-family: 'Lato', sans-serif;
+	font-family: "Montserrat", Helvetica,'Lato', Arial, sans-serif;/*'Lato', sans-serif;*/
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.5rem;
@@ -599,6 +778,10 @@ p {
 	flex: 0 1 36px;
 	/*было flex: 0 1 36px;*/
 }
+.button_callback{
+	position: absolute;
+top: -25px;
+}
 
 .icon2 {
 	width: 100%;
@@ -656,18 +839,21 @@ p {
 @media (max-width: 991px) {
 	.highlights2 {
 		font-size: 16px;
+		color: floralwhite;
 	}
 }
 
 @media (max-width: 767px) {
 	.highlights2 {
 		font-size: 15px;
+		color: floralwhite;
 	}
 }
 
 @media (max-width: 479px) {
 	.highlights2 {
 		font-size: 14px;
+		color: floralwhite;
 	}
 }
 
@@ -704,18 +890,22 @@ p {
 @media (max-width: 991px) {
 	.small_text_body2.layout {
 		margin: 0px 6px 0px 0px;
+		color: floralwhite;
+
 	}
 }
 
 @media (max-width: 767px) {
 	.small_text_body2.layout {
 		margin: 0px 5px 0px 0px;
+		color: floralwhite;
+
 	}
 }
 
 /*Прикручиваю Меню Бутстрап*/
 .button {
-	font-family: Asap;
+	font-family: Asap; /*"Montserrat", Helvetica,'Lato', Arial, sans-serif;*/
 	font-size: 1rem;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -757,7 +947,10 @@ p {
 }
 
 .menu li a:hover {
-	color: #808080;
+	/*color: #808080;*/
+	background-color: #fdb64e;
+	color: #434b53;
+	text-decoration: none;
 }
 
 .menu li a {
@@ -794,7 +987,9 @@ p {
 	outline: none;
 }
 
-/*Описание Флекс Section1*/
+/*Описание Флекс Section1
+не все уже нужно, но оставлю, т.к. есть нужные элементы
+позже почистить*/
 .flex1 {
 	display: flex;
 }
@@ -885,6 +1080,12 @@ p {
 		flex: 0 0 100%;
 	}
 }
+@media (max-width: 991px) {
+	.flex1>.item {
+		color: floralwhite;
+	}
+}
+
 
 .block1 {
 	display: flex;
@@ -1427,28 +1628,28 @@ p {
 	}
 }
 
-.block20 {
+/*.block20 {
 	display: flex;
 	flex-direction: column;
-}
+}*/
 
 .block20.layout {
 	/*position: relative;*/
-	flex-grow: 1;
+	/*flex-grow: 1;*/
 	margin: 141px 0px 25px;
 	/*пробую менять позицию - прижать вправо от левого блока*/
 	position: absolute;
 	width: 216px;
 	height: 378px;
 	/*378*/
-	left: 999px;
+	left: 1000px;
 	/*983*/
-	/*right: 1px;*/
+	/*right: 10px;*/
 	/*top: 100px;/*150*/
 	background: rgba(68, 81, 97, 0.7);
 	/*rgba(242, 246, 250, 0.7);rgba(68, 81, 97, 0.7);*/
 	border-radius: 5px;
-	bottom: 165px;
+	/*bottom: 165px;*/
 	/*вернула этот правый блок в absolute и добавила нижний отступ - встал как надо*/
 
 }
@@ -1888,7 +2089,18 @@ p {
 	}
 
 	h1 {
-		font-size: 1.8rem;
+		font-size: 1.5rem; 
+	}
+
+	h2 {
+		font-size: 1.2rem;
+	}
+
+	h3 {
+		font-size: 1.0rem;
+	}
+	/*h1 {
+		font-size: 1.8rem; 
 	}
 
 	h2 {
@@ -1897,7 +2109,7 @@ p {
 
 	h3 {
 		font-size: 1.2rem;
-	}
+	}*/
 
 	/*.header {
 		display: grid;
@@ -2028,8 +2240,19 @@ p {
 		grid-row-gap: 0;
 		height: 100vh;
 	}
-
 	h1 {
+		font-size: 1.2rem;
+	}
+
+	h2 {
+		font-size: 0.8rem;
+	}
+
+	h3 {
+		font-size: 0.6rem;
+	}
+
+	/*h1 {
 		font-size: 1.5rem;
 	}
 
@@ -2039,7 +2262,7 @@ p {
 
 	h3 {
 		font-size: 1rem;
-	}
+	}*/
 
 	/*.header {
 		display: grid;
@@ -2216,6 +2439,18 @@ p {
 	}
 
 	h1 {
+		font-size: 1rem;
+	}
+
+	h2 {
+		font-size: 0.7rem;
+	}
+
+	h3 {
+		font-size: 0.6rem;
+	}
+
+	/*h1 {
 		font-size: 1.3rem;
 	}
 
@@ -2225,7 +2460,7 @@ p {
 
 	h3 {
 		font-size: 1rem;
-	}
+	}*/
 
 	/*.header {
 		display: grid;
